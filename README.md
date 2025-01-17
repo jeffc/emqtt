@@ -1,16 +1,9 @@
 # emqtt
 
-Receive emails and publish to MQTT. Super simple stuff. Topic will be `<configurable_prefix>/<sender_email.replace('@', '')>`.
-
-I needed this to make my D-Link camera's motion sensor functionality useful.
-Available actions on the camera are to send an email or upload an image to an FTP..
-This script makes it easier to integrate into automation systems.
+Receive emails and publish to MQTT. Based heavily on
+[wicol/emqtt](http://wicol/emqtt)
 
 It's based on aiosmtpd and paho-mqtt.
-
-I made a docker image because like any hipster dev I like docker. At least it's based on alpine so there's that.
-
-Protip: `docker exec emqtt find attachments -type f -ctime +20 -delete`
 
 ## Run it
 
